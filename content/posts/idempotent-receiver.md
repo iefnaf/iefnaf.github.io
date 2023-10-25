@@ -1,7 +1,6 @@
 +++
 title = 'Idempotent Receiver'
 date = 2023-10-25T14:35:28+08:00
-draft = true
 +++
 
 辨别来自客户端的请求之前是否处理过，从而当客户端重试时能够丢弃重复的请求。
