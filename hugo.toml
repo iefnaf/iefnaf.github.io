@@ -1,0 +1,4 @@
+baseURL = 'https://iefnaf.github.io/'
+languageCode = 'en-us'
+title = "Fanfei's Blog"
+theme = "hugo-theme-nostyleplease"
