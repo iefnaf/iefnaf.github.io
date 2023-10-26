@@ -31,22 +31,13 @@ public class DumpMethods {
 }
 ```
 
-运行这个程序：
+输出：
 
-```shell
-$ javac DumpMethods.java
-$ java DumpMethods
-```
-
-将会产生如下输出：
-
-```
-public boolean java.util.Stack.empty()
-public synchronized java.lang.Object java.util.Stack.peek()
-public synchronized int java.util.Stack.search(java.lang.Object)
-public java.lang.Object java.util.Stack.push(java.lang.Object)
-public synchronized java.lang.Object java.util.Stack.pop()
-```
+> public boolean java.util.Stack.empty()
+> public synchronized java.lang.Object java.util.Stack.peek()
+> public synchronized int java.util.Stack.search(java.lang.Object)
+> public java.lang.Object java.util.Stack.push(java.lang.Object)
+> public synchronized java.lang.Object java.util.Stack.pop()
 
 输出的是`java.util.Stack`的方法名，以及方法的参数类型和返回值。
 
@@ -66,9 +57,9 @@ Class c = Class.forName("java.lang.String");
 
 另一种方式是使用`Class c = int.class;`或者`Class c = Integer.TYPE;`来获得基本类型的类信息。
 
-**第二步：**调用`getDeclaredMethods`之类的方法，获得这个类的所有方法的一个列表。
+**第二步**：调用`getDeclaredMethods`之类的方法，获得这个类的所有方法的一个列表。
 
-第三步：使用反射API来操作第二步获得的信息。
+**第三步**：使用反射API来操作第二步获得的信息。
 
 ## 模拟instanceOf
 
@@ -90,15 +81,13 @@ public class ReflectTest {
 
 编译运行：
 
-```shell
-$ javac ReflectTest.java
-$ java ReflectTest java.util.Stack
-false
-false
-$ java ReflectTest java.util.ArrayList
-false
-true
-```
+> javac ReflectTest.java
+> java ReflectTest java.util.Stack
+> false
+> false
+> java ReflectTest java.util.ArrayList
+> false
+> true
 
 ## 得到一个类的方法
 
@@ -149,14 +138,12 @@ public class ReflectTest {
 
 编译运行，得到以下输出：
 
-```
-name = f1
-declaring class  = class ReflectTest$A
-parameter 0 = java.lang.Object
-parameter 1 = int
-exception 0 = java.lang.NullPointerException
-return type = int
-```
+> name = f1
+> declaring class  = class ReflectTest$A
+> parameter 0 = java.lang.Object
+> parameter 1 = int
+> exception 0 = java.lang.NullPointerException
+> return type = int
 
 ## 获得构造函数相关信息
 
@@ -186,7 +173,6 @@ public class ReflectTest {
                 for (int i = 0; i < exceptionTypes.length; i++) {
                     System.out.println("exception #" + i + " " + exceptionTypes[i]);
                 }
-                System.out.println("--------------------------");
             }
         } catch (Throwable e) {
             throw new RuntimeException(e);
@@ -197,16 +183,13 @@ public class ReflectTest {
 
 编译运行，得到以下输出：
 
-```
-name = ReflectTest
-declaring class = class ReflectTest
---------------------------
-name = ReflectTest
-declaring class = class ReflectTest
-param #0 int
-param #1 double
---------------------------
-```
+> name = ReflectTest
+> declaring class = class ReflectTest
+>
+> name = ReflectTest
+> declaring class = class ReflectTest
+> param #0 int
+> param #1 double
 
 ## 获得类的成员
 
@@ -230,7 +213,6 @@ public class ReflectTest {
                 System.out.println("type = " + fld.getType());
                 int mod = fld.getModifiers();
                 System.out.println("modifiers = " + Modifier.toString(mod));
-                System.out.println("----");
             }
         } catch (Throwable e) {
             throw new RuntimeException(e);
@@ -241,20 +223,17 @@ public class ReflectTest {
 
 输出：
 
-```
-name = d
-type = double
-modifiers = private
-----
-name = i
-type = int
-modifiers = public static final
-----
-name = s
-type = class java.lang.String
-modifiers = 
-----
-```
+> name = d
+> type = double
+> modifiers = private
+>
+> name = i
+> type = int
+> modifiers = public static final
+>
+> name = s
+> type = class java.lang.String
+> modifiers = 
 
 ## 通过名字调用方法
 
