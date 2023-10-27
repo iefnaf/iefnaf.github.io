@@ -12,19 +12,23 @@ title = "about"
   url = "https://github.com/iefnaf"
 
 [[entries]]
-title = "all posts"
+title = "recent posts"
 
   [entries.post_list]
+  section = "posts"
   limit = 5
   show_more = true
-  show_more_text = "See archive..."
-  show_more_url = "posts"
+  show_more_text = "See all posts..."
+  show_more_url = "https://iefnaf.github.io/posts/"
 
 [[entries]]
-title = "posts by category"
+title = "categories"
+url = "https://iefnaf.github.io/categories/"
 
-  [entries.post_list]
-  section = "categories"
-  show_more = true
-  show_more_text = "See more posts..."
-  show_more_url = "categories"
+  [[entries.entries]]
+  title = "Java"
+  url = "https://iefnaf.github.io/categories/java/"
+
+  [[entries.entries]]
+  title = "Distributed System"
+  url = "https://iefnaf.github.io/categories/distributed-system/"
