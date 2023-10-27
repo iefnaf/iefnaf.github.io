@@ -1,7 +1,7 @@
 +++
-title = '🧙Reflection: the black magic of Java'
-date = 2023-10-26T16:13:13+08:00
-
+title: '🧙Reflection: the black magic of Java'
+date: 2023-10-26T16:13:13+08:00
+categories: [Java]
 +++
 
 反射（Reflection）是Java语言的一个特性。它允许一个运行中的Java程序来自检，操作程序内部的属性。比如，Java类可以获得所有成员的名字，并且展示它们。
