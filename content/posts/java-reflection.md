@@ -1,5 +1,5 @@
 ---
-title: '🧙Reflection: the black magic of Java'
+title: '🧙 Reflection: the black magic of Java'
 date: 2023-10-26T16:13:13+08:00
 categories: [Java]
 ---
